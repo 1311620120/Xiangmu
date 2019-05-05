@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="8"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="550dp"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:layout_marginTop="20dp"
+    android:gravity="center"
+    android:background="@drawable/circle_radius">
+    <!--头像 -->
+    <ImageView
+        android:id="@+id/item_circle_image_header"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        fresco:layout_constraintLeft_toLeftOf="parent"
+        fresco:layout_constraintTop_toTopOf="parent"
+        />
+    <!--昵称 -->
+    <TextView
+        android:id="@+id/item_circle_text_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="84dp"
+        android:text="safggafs"
+        android:textColor="#666666"
+        android:textSize="20sp"
+        fresco:layout_constraintBottom_toBottomOf="@id/item_circle_image_header"
+        fresco:layout_constraintLeft_toRightOf="@id/item_circle_image_header"
+        fresco:layout_constraintTop_toTopOf="@id/item_circle_image_header"
+        fresco:layout_constraintVertical_bias="0.419" />
+    <!-- 时间 -->
+    <TextView
+        android:id="@+id/item_circle_text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="safggafs"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        fresco:layout_constraintBottom_toBottomOf="@id/item_circle_image_header"
+        fresco:layout_constraintRight_toRightOf="parent"
+        fresco:layout_constraintTop_toTopOf="@id/item_circle_image_header" />
+    <!--评价内容 -->
+    <TextView
+        android:id="@+id/item_circle_text_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        fresco:layout_constraintLeft_toLeftOf="parent"
+        fresco:layout_constraintRight_toRightOf="parent"
+        fresco:layout_constraintTop_toBottomOf="@id/item_circle_image_header"
+        android:layout_marginLeft="6dp"
+        android:text="safggafs"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        />
+    <!--评价图片 -->
+    <ImageView
+        android:id="@+id/item_circle_image_content"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        fresco:layout_constraintLeft_toLeftOf="parent"
+        fresco:layout_constraintRight_toRightOf="parent"
+        fresco:layout_constraintTop_toBottomOf="@id/item_circle_text_content"
+        fresco:layout_constraintBottom_toTopOf="@id/item_circle_image_like"
+        />
+    <!--点赞数量 -->
+    <TextView
+        android:id="@+id/item_circle_text_num"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        fresco:layout_constraintRight_toRightOf="parent"
+        fresco:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="14sp"
+        android:lines="1"
+        android:text="safggafs"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="2dp"
+        />
+    <!--点赞的图片 -->
+    <ImageView
+        android:id="@+id/item_circle_image_like"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@mipmap/common_btn_prise_s_xhdpi"
+        fresco:layout_constraintRight_toLeftOf="@id/item_circle_text_num"
+        fresco:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="10dp"
+        />
+    <ImageView
+        android:id="@+id/item_circle_image_disike"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@mipmap/common_btn_prise_n_xhdpi"
+        fresco:layout_constraintRight_toLeftOf="@id/item_circle_text_num"
+        fresco:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="10dp"
+        />
+</android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

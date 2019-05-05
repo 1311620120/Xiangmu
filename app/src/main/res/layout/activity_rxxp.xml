@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activity.RxxpActivity">
+   <include layout="@layout/layout"/>
+   <TextView
+       android:id="@+id/check_Mlss"
+       android:layout_width="match_parent"
+       android:layout_height="45dp"
+       android:layout_marginTop="10dp"
+       android:layout_marginBottom="10dp"
+       android:text="魔力时尚"
+       android:textSize="26sp"
+       android:textColor="#6c36f5"
+       android:gravity="center"
+       android:background="@mipmap/bg_mlss_syf"/>
+
+   <android.support.v7.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/Xrecycler_Rxxp"></android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

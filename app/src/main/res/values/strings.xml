@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Xiangmu</string>
+    <string name="reg_text_login">已有账户？立即登录</string>
+</resources>

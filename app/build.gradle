@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.xiangmu"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.6'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.1'
+//fresco
+    implementation 'com.facebook.fresco:fresco:0.14.1'
+
+//recyclerView
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    //BottomTabBar
+    implementation 'com.hjm:BottomTabBar:1.1.1'
+//Xbanner
+    implementation 'com.xhb:xbanner:1.3.1'
+//butterknilfe
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //eventBus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+//Glide图片加载
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    //xrecyleview
+    implementation 'com.jcodecraeer:xrecyclerview:1.3.2'
+
+    //flyBanner
+    implementation 'com.recker.flybanner:flybanner:1.3'
+//及解决冲突
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '27.1.1'
+                }
+            }
+        }
+    }
+    //fresco
+    allprojects {
+        repositories {
+            google()
+            jcenter()
+            maven { url 'https://jitpack.io' }
+        }
+    }
+}
